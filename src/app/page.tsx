@@ -576,3 +576,15 @@ function Newsletter() {
 // ── 13. PAGE EXPORT ────────────────────────────────────────
 
 export default function HomePage() {
+  return (
+    <>
+      <Hero />
+      <Ticker />
+      <Categories />
+      <FeaturedProducts />
+      <BrandStatement />
+      <PromoBanner />
+      <Newsletter />
+    </>
+  )
+}
