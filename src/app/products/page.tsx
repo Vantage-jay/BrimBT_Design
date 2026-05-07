@@ -454,3 +454,137 @@ export default function ProductsPage() {
     if (filters.sizes.length > 0)         count += filters.sizes.length
     if (filters.badge && filters.badge !== 'all') count++
     return count
+}, [filters])
+
+  // Apply filters + sort to all products
+  const filteredProducts = useMemo(
+    () => applyFilters(ALL_PRODUCTS, filters),
+    [filters]
+  )
+
+  // Paginate
+  const visibleProducts = filteredProducts.slice(0, page * PAGE_SIZE)
+  const hasMore         = visibleProducts.length < filteredProducts.length
+
+  const handleFilterChange = useCallback((newFilters: ProductFilters) => {
+    setFilters(newFilters)
+    setPage(1)   // reset to first page on filter change
+  }, [])
+
+  const handleClearFilters = useCallback(() => {
+    setFilters(DEFAULT_FILTERS)
+    setPage(1)
+  }, [])
+
+  const handleLoadMore = useCallback(() => {
+    setLoading(true)
+    // Simulate async fetch delay — replace with real API call later
+    setTimeout(() => {
+      setPage((p) => p + 1)
+      setLoading(false)
+    }, 600)
+  }, [])
+
+  const sortLabel = SORT_OPTIONS.find((o) => o.value === filters.sort)?.label ?? ''
+
+  return (
+    <div className="max-w-[1440px] mx-auto px-6 lg:px-15 py-16">
+
+      {/* Page Header */}
+      <PageHeader
+        title={
+          filters.category === 'all'
+            ? 'All Products'
+            : filters.category.charAt(0).toUpperCase() + filters.category.slice(1)
+        }
+        count={filteredProducts.length}
+      />
+
+      <div className="flex gap-12">
+
+        {/* ── Desktop Sidebar ──────────────────────────── */}
+        <div className="hidden lg:block">
+          <FilterSidebar
+            filters={filters}
+            onChange={handleFilterChange}
+            onClear={handleClearFilters}
+            totalActive={activeFilterCount}
+          />
+        </div>
+
+        {/* ── Product Area ──────────────────────────────── */}
+        <div className="flex-1 min-w-0">
+
+          {/* Sort bar */}
+          <SortBar
+            sort={filters.sort}
+            onSort={(sort) => handleFilterChange({ ...filters, sort })}
+            showMobileFilters={() => setMobileFiltersOpen(true)}
+            activeFilterCount={activeFilterCount}
+          />
+
+          {/* Active filter chips */}
+          <ActiveChips filters={filters} onChange={handleFilterChange} />
+
+          {/* Product Grid */}
+          <ProductGrid
+            products={visibleProducts}
+            loading={false}
+            columns={3}
+            showResultCount
+            totalCount={filteredProducts.length}
+            sortLabel={sortLabel}
+            emptyMessage="No products match your current filters. Try adjusting or clearing them."
+            onClearFilters={handleClearFilters}
+            hasMore={hasMore}
+            onLoadMore={handleLoadMore}
+            loadingMore={loading}
+          />
+        </div>
+      </div>
+
+      {/* ── Mobile Filters Drawer ─────────────────────── */}
+      <AnimatePresence>
+        {mobileFiltersOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{    opacity: 0 }}
+              className="fixed inset-0 bg-black/60 z-40 lg:hidden"
+              onClick={() => setMobileFiltersOpen(false)}
+            />
+            <motion.div
+              initial={{ x: '-100%' }}
+              animate={{ x: 0 }}
+              exit={{    x: '-100%' }}
+              transition={{ type: 'tween', duration: 0.32, ease: 'easeInOut' }}
+              className="fixed top-0 left-0 h-full w-80 bg-brand-black border-r border-brand-accent/20 z-50 overflow-y-auto lg:hidden"
+            >
+              <div className="flex items-center justify-between px-6 py-6 border-b border-brand-accent/15">
+                <span className="text-[11px] tracking-[0.25em] uppercase text-brand-white font-medium">
+                  Filters
+                </span>
+                <button
+                  onClick={() => setMobileFiltersOpen(false)}
+                  className="text-brand-gray hover:text-brand-white transition-colors"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+              <div className="px-6 pb-10">
+                <FilterSidebar
+                  filters={filters}
+                  onChange={(f) => { handleFilterChange(f); setMobileFiltersOpen(false) }}
+                  onClear={() => { handleClearFilters(); setMobileFiltersOpen(false) }}
+                  totalActive={activeFilterCount}
+                />
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+    </div>
+  )
+}
