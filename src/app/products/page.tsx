@@ -454,7 +454,7 @@ export default function ProductsPage() {
     if (filters.sizes.length > 0)         count += filters.sizes.length
     if (filters.badge && filters.badge !== 'all') count++
     return count
-}, [filters])
+  }, [filters])
 
   // Apply filters + sort to all products
   const filteredProducts = useMemo(
