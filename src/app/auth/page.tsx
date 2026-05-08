@@ -583,7 +583,7 @@ export default function AuthPage() {
 
           {/* Forms */}
           <AnimatePresence mode="wait">
-            {tab === 'login' ? (
+                  {tab === 'login' ? (
               <LoginForm    key="login"    onSwitch={() => setTab('register')} />
             ) : (
               <RegisterForm key="register" onSwitch={() => setTab('login')}    />
