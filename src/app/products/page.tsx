@@ -453,7 +453,7 @@ export default function ProductsPage() {
     if (filters.priceRange[1] < 500)      count++
     if (filters.sizes.length > 0)         count += filters.sizes.length
     if (filters.badge && filters.badge !== 'all') count++
-    return count
+     return count
   }, [filters])
 
   // Apply filters + sort to all products
