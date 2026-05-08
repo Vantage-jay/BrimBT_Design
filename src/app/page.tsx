@@ -587,4 +587,4 @@ export default function HomePage() {
       <Newsletter />
     </>
   )
-}
+} 
