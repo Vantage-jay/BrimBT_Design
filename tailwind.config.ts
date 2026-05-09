@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // ── BrinmBT Design Brand Colors ──────────────────────
+      // ── BrimBT Design Brand Colors ──────────────────────
       colors: {
         brand: {
           black:      '#0a0a0a',
