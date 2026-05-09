@@ -1,7 +1,7 @@
 'use client'
 
 /* ============================================================
-   BrinmBT Design — Homepage
+   BrimBT Design — Homepage
    File: src/app/page.tsx
    ============================================================ */
 
@@ -19,7 +19,7 @@ const FEATURED_PRODUCTS: Product[] = [
   {
     id: '1',
     name: 'Silk Body Wrap Dress',
-    brand: 'BrinmBT Studio',
+    brand: 'BrimBT Studio',
     slug: 'silk-body-wrap-dress',
     category: 'clothing',
     description: 'Luxurious silk wrap dress with adjustable tie waist.',
