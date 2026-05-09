@@ -1,5 +1,5 @@
 /* ============================================================
-   BrinmBT Design — TypeScript Types
+   BrimBT Design — TypeScript Types
    File: src/types/index.ts
    ============================================================ */
 
