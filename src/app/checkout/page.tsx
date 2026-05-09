@@ -1,7 +1,7 @@
 'use client'
 
 /* ============================================================
-   BrinmBT Design — Checkout Page
+   BrimBT Design — Checkout Page
    File: src/app/checkout/page.tsx
    ============================================================ */
 
@@ -518,7 +518,7 @@ export default function CheckoutPage() {
 
       {/* Page title */}
       <div className="mb-10">
-        <p className="eyebrow mb-2">BrinmBT Design</p>
+        <p className="eyebrow mb-2">BrimBT Design</p>
         <h1 className="font-display text-[clamp(32px,4vw,52px)] font-light text-brand-white">
           {step === 3 ? 'Order Confirmed' : 'Secure Checkout'}
         </h1>
