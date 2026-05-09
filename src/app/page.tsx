@@ -41,7 +41,7 @@ const FEATURED_PRODUCTS: Product[] = [
   {
     id: '2',
     name: 'Cloud Runner Sneakers',
-    brand: 'BrinmBT Footwear',
+    brand: 'BrimBT Footwear',
     slug: 'cloud-runner-sneakers',
     category: 'footwear',
     description: 'Ultra-light performance sneakers with cloud sole.',
@@ -64,7 +64,7 @@ const FEATURED_PRODUCTS: Product[] = [
   {
     id: '3',
     name: 'Linen Wide Leg Set',
-    brand: 'BrinmBT Studio',
+    brand: 'BrimBT Studio',
     slug: 'linen-wide-leg-set',
     category: 'clothing',
     description: 'Breathable linen co-ord set with wide leg trousers.',
@@ -86,7 +86,7 @@ const FEATURED_PRODUCTS: Product[] = [
   {
     id: '4',
     name: 'Sculptured Heel Mule',
-    brand: 'BrinmBT Footwear',
+    brand: 'BrimBT Footwear',
     slug: 'sculptured-heel-mule',
     category: 'footwear',
     description: 'Architectural heel mule in premium leather.',
@@ -471,7 +471,7 @@ function BrandStatement() {
 
         <Reveal delay={0.15}>
           <p className="text-sm text-brand-gray leading-[2] mb-6">
-            BrinmBT Design was born from a single belief: that what you wear
+            BrimBT Design was born from a single belief: that what you wear
             shapes how you move through the world. Every stitch, every sole,
             every silhouette is crafted with that philosophy in mind.
           </p>
