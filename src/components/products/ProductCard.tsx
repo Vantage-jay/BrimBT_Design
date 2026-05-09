@@ -1,7 +1,7 @@
 'use client'
 
 /* ============================================================
-   BrinmBT Design — ProductCard Component
+   BrimBT Design — ProductCard Component
    File: src/components/products/ProductCard.tsx
    ============================================================ */
 
