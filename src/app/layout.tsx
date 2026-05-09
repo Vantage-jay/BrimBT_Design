@@ -28,10 +28,10 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: {
     default:  'BrimBT Design — Premium Bodywear & Footwear',
-    template: '%s | BrinmBT Design',
+    template: '%s | BrimBT Design',
   },
-  description: 'Shop premium bodywear, footwear & lifestyle essentials at BrinmBT Design. Crafted for the intentional — worn by the bold.',
-  keywords: ['bodywear','footwear','clothing','fashion','BrinmBT Design','premium fashion','accessories'],
+  description: 'Shop premium bodywear, footwear & lifestyle essentials at BrimBT Design. Crafted for the intentional — worn by the bold.',
+  keywords: ['bodywear','footwear','clothing','fashion','BrimBT Design','premium fashion','accessories'],
   authors:  [{ name: 'BrimBT Design' }],
   creator:  'BrimBT Design',
   openGraph: {
