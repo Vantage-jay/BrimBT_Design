@@ -1,7 +1,7 @@
 'use client'
 
 /* ============================================================
-   BrinmBT Design — Footer Component
+   BrimBT Design — Footer Component
    File: src/components/layout/Footer.tsx
    ============================================================ */
 
@@ -214,7 +214,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-[12px] text-brand-gray tracking-wide">
-          © {year} BrinmBT Design. All rights reserved.
+          © {year} BrimBT Design. All rights reserved.
         </p>
 
         {/* Legal Links */}
