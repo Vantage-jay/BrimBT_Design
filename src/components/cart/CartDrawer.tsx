@@ -1,7 +1,7 @@
 'use client'
 
 /* ============================================================
-   BrinmBT Design — Cart Drawer
+   BrimBT Design — Cart Drawer
    File: src/components/cart/CartDrawer.tsx
    ============================================================ */
 
