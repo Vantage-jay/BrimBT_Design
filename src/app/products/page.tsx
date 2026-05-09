@@ -1,7 +1,5 @@
 'use client'
 
-export const dynamic = 'force-dynamic'
-
 /* ============================================================
    BrinmBT Design — Product Listings Page
    File: src/app/products/page.tsx
@@ -341,10 +339,10 @@ function ProductsPageInner() {
             onClearFilters={handleClearFilters}
             hasMore={hasMore}
             onLoadMore={handleLoadMore}
-            loadingMore={loading}
+            loadingMore={loadingMore}
           />
         </div>
-      </div>
+         </div>
 
       {/* ── Mobile Filters Drawer ─────────────────────── */}
       <AnimatePresence>
@@ -390,4 +388,4 @@ function ProductsPageInner() {
 
     </div>
   )
-       }
+                                                                          }
