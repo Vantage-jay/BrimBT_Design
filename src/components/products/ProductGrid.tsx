@@ -1,7 +1,7 @@
 'use client'
 
 /* ============================================================
-   BrinmBT Design — ProductGrid Component
+   BrimBT Design — ProductGrid Component
    File: src/components/products/ProductGrid.tsx
    ============================================================ */
 
