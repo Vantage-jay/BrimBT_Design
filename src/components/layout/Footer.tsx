@@ -255,7 +255,6 @@ export default function Footer() {
         <p className="font-display text-[10vw] font-semibold tracking-[0.1em] text-brand-accent/[0.03] text-center whitespace-nowrap leading-none">
           BRIMBT DESIGN
         </p>
-         <p>powerded by vantage</p>
       </div>
 
     </footer>
