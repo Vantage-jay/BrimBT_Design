@@ -1,5 +1,5 @@
 /* ============================================================
-   BrinmBT Design — Root Layout
+   BrimBT Design — Root Layout
    File: src/app/layout.tsx
    ============================================================ */
 
@@ -33,38 +33,38 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default:  'BrinmBT Design — Premium Bodywear & Footwear',
-    template: '%s | BrinmBT Design',   // e.g. "Silk Wrap Dress | BrinmBT Design"
+    default:  'BrimBT Design — Premium Bodywear & Footwear',
+    template: '%s | BrimBT Design',   // e.g. "Silk Wrap Dress | BrimBT Design"
   },
   description:
-    'Shop premium bodywear, footwear & lifestyle essentials at BrinmBT Design. Crafted for the intentional — worn by the bold.',
+    'Shop premium bodywear, footwear & lifestyle essentials at BrimBT Design. Crafted for the intentional — worn by the bold.',
   keywords: [
     'bodywear',
     'footwear',
     'clothing',
     'fashion',
-    'BrinmBT Design',
+    'BrimBT Design',
     'premium fashion',
     'women clothing',
     'accessories',
   ],
-  authors:  [{ name: 'BrinmBT Design' }],
-  creator:  'BrinmBT Design',
+  authors:  [{ name: 'BrimBT Design' }],
+  creator:  'BrimBT Design',
 
   // ── Open Graph (Facebook, WhatsApp previews) ────────────
   openGraph: {
     type:        'website',
     locale:      'en_US',
-    url:         'https://brinmbtdesign.com',
-    siteName:    'BrinmBT Design',
-    title:       'BrinmBT Design — Premium Bodywear & Footwear',
+    url:         'https://brimbtdesign.com',
+    siteName:    'BrimBT Design',
+    title:       'BrimBT Design — Premium Bodywear & Footwear',
     description: 'Shop premium bodywear, footwear & lifestyle essentials.',
     images: [
       {
         url:    '/og-image.jpg',   // add this image to /public later
         width:  1200,
         height: 630,
-        alt:    'BrinmBT Design',
+        alt:    'BrimBT Design',
       },
     ],
   },
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   // ── Twitter / X card ────────────────────────────────────
   twitter: {
     card:        'summary_large_image',
-    title:       'BrinmBT Design',
+    title:       'BrimBT Design',
     description: 'Premium bodywear, footwear & lifestyle essentials.',
     images:      ['/og-image.jpg'],
   },
