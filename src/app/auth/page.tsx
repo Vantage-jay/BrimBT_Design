@@ -1,7 +1,7 @@
 'use client'
 
 /* ============================================================
-   BrinmBT Design — Auth Page (Login & Register)
+   BrimBT Design — Auth Page (Login & Register)
    File: src/app/auth/page.tsx
    ============================================================ */
 
@@ -401,7 +401,7 @@ function RegisterForm({ onSwitch }: { onSwitch: () => void }) {
       className="space-y-5"
     >
       <AnimatePresence>
-        {success && <SuccessToast message="Account created! Welcome to BrinmBT Design." />}
+        {success && <SuccessToast message="Account created! Welcome to BrimBT Design." />}
       </AnimatePresence>
 
       {/* Name row */}
@@ -448,7 +448,7 @@ function RegisterForm({ onSwitch }: { onSwitch: () => void }) {
             className="accent-brand-accent w-3.5 h-3.5 mt-0.5 flex-shrink-0"
           />
           <span className="text-[12px] text-brand-gray group-hover:text-brand-white transition-colors leading-relaxed">
-            I agree to BrinmBT Design&apos;s{' '}
+            I agree to BrimBT Design&apos;s{' '}
             <Link href="/terms" className="text-brand-accent hover:underline">Terms of Service</Link>
             {' '}and{' '}
             <Link href="/privacy" className="text-brand-accent hover:underline">Privacy Policy</Link>
@@ -518,7 +518,7 @@ export default function AuthPage() {
 
         {/* Logo */}
         <Link href="/" className="font-display text-2xl font-semibold tracking-[0.22em] text-brand-white uppercase">
-          Brinm<span className="text-brand-accent">BT</span> Design
+          Brim<span className="text-brand-accent">BT</span> Design
         </Link>
 
         {/* Quote */}
@@ -527,7 +527,7 @@ export default function AuthPage() {
             "Style is a way to say who you are without having to{' '}
             <em className="italic text-brand-accent">speak.</em>"
           </p>
-          <p className="text-[12px] text-brand-gray tracking-[0.15em]">— BrinmBT Design</p>
+          <p className="text-[12px] text-brand-gray tracking-[0.15em]">— BrimBT Design</p>
         </div>
 
         {/* Benefits */}
@@ -552,7 +552,7 @@ export default function AuthPage() {
 
           {/* Mobile logo */}
           <Link href="/" className="font-display text-xl font-semibold tracking-[0.2em] text-brand-white uppercase block mb-10 lg:hidden">
-            Brinm<span className="text-brand-accent">BT</span> Design
+            Brim<span className="text-brand-accent">BT</span> Design
           </Link>
 
           {/* Tab switcher */}
@@ -575,7 +575,7 @@ export default function AuthPage() {
 
           {/* Heading */}
           <div className="mb-8">
-            <p className="eyebrow mb-2">BrinmBT Design</p>
+            <p className="eyebrow mb-2">BrimBT Design</p>
             <h1 className="font-display text-[clamp(26px,3vw,36px)] font-light text-brand-white">
               {tab === 'login' ? 'Welcome back' : 'Create your account'}
             </h1>
