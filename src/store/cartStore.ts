@@ -1,5 +1,5 @@
 /* ============================================================
-   BrinmBT Design — Cart Store
+   BrimBT Design — Cart Store
    File: src/store/cartStore.ts
    ============================================================ */
 
@@ -150,7 +150,7 @@ export const useCartStore = create<CartState>()(
 
     // ── Persist config ────────────────────────────────────
     {
-      name:    'brinmbt-cart',          // localStorage key
+      name:    'brimbt-cart',          // localStorage key
       storage: createJSONStorage(() => localStorage),
 
       // Only persist the cart items — not the UI state (isCartOpen)
