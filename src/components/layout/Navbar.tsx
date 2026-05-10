@@ -1,7 +1,7 @@
 'use client'
 
 /* ============================================================
-   BrimBT Design — Navbar Component
+   BrinmBT Design — Navbar Component
    File: src/components/layout/Navbar.tsx
    ============================================================ */
 
