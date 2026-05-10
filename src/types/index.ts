@@ -1,5 +1,5 @@
 /* ============================================================
-   BrinmBT Design — TypeScript Types
+   BrimBT Design — TypeScript Types
    File: src/types/index.ts
    ============================================================ */
 
@@ -27,7 +27,7 @@ export interface ProductVariant {
 export interface Product {
   id: string
   name: string
-  brand: string       // e.g. "BrinmBT Studio" | "BrinmBT Footwear"
+  brand: string       // e.g. "BrimBT Studio" | "BrimBT Footwear"
   slug: string        // used in URL: /products/silk-wrap-dress
   category: ProductCategory
   description: string
