@@ -336,7 +336,7 @@ export default function ProductDetailPage() {
         <section>
           <div className="flex items-end justify-between mb-12">
             <div>
-              <p className="eyebrow mb-3">You May Also Like</p
+              <p className="eyebrow mb-3">You May Also Like</p>
 <h2 className="section-title">Complete the <em>Look</em></h2>
             </div>
             <Link href={`/products?category=${product.category}`} className="text-[11px] tracking-[0.18em] uppercase text-brand-gray border-b border-brand-gray pb-0.5 hover:text-brand-accent hover:border-brand-accent transition-colors">
