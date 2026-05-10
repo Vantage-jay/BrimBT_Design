@@ -178,7 +178,7 @@ function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-6 border-b border-brand-accent/15">
               <span className="font-display text-xl tracking-[0.2em] text-brand-white">
-                Brinm<span className="text-brand-accent">BT</span> Design
+                Brim<span className="text-brand-accent">BT</span> Design
               </span>
               <button onClick={onClose} className="text-brand-gray hover:text-brand-white transition-colors">
                 <X size={20} />
@@ -284,7 +284,7 @@ export default function Navbar() {
             href="/"
             className="font-display text-2xl font-semibold tracking-[0.22em] text-brand-white uppercase z-10"
           >
-            Brinm<span className="text-brand-accent">BT</span> Design
+            Brim<span className="text-brand-accent">BT</span> Design
           </Link>
 
           {/* ── Desktop Nav Links ──────────────────────── */}
