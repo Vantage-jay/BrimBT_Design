@@ -56,13 +56,13 @@ export default function AboutPage() {
         </Reveal>
         <Reveal delay={0.15}>
           <p className="text-[14px] text-brand-gray leading-[2] mb-6">
-            BrimBT Design was founded with a single conviction — that clothing is not just fabric, it is armour. It is the first thing you put on in the morning and the last thing you take off at night. It shapes your posture, your confidence, and your presence in every room you walk into.
+            BrimBT Design was founded with a single conviction that clothing is not just fabric, it is armour. It is the first thing you put on in the morning and the last thing you take off at night. It shapes your posture, your confidence, and your presence in every room you walk into.
           </p>
           <p className="text-[14px] text-brand-gray leading-[2] mb-6">
             We started by asking a simple question: why should premium quality and everyday wearability be mutually exclusive? The answer drove us to build a collection that lives at the intersection of luxury and real life.
           </p>
           <p className="text-[14px] text-brand-gray leading-[2]">
-            Every piece in our collection — from our silk bodywear to our performance footwear — is designed with that philosophy at its core. We do not chase trends. We build wardrobes.
+            Every piece in our collection from our silk bodywear to our performance footwear is designed with that philosophy at its core. We do not chase trends. We build wardrobes.
           </p>
         </Reveal>
       </section>
@@ -117,9 +117,9 @@ export default function AboutPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { name: 'Amara Osei',      role: 'Creative Director'  },
-            { name: 'Lena Müller',     role: 'Head of Design'     },
+            { name: 'Oluwatobiloba Ojatunwase',     role: 'Head of Brand'     },
             { name: 'Kofi Asante',     role: 'Brand Director'     },
-            { name: 'Priya Nair',      role: 'Head of Production' },
+            { name: 'Vantage Jay',      role: 'Software Developer' },
           ].map((member, i) => (
             <Reveal key={member.name} delay={i * 0.08}>
               <div className="group">
