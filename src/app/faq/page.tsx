@@ -1,7 +1,7 @@
 // ══════════════════════════════════════════════════════════════
 // FILE: src/app/faq/page.tsx
 // ══════════════════════════════════════════════════════════════
-/*
+
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
@@ -107,4 +107,3 @@ export default function FAQPage() {
     </div>
   )
 }
-*/
