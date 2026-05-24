@@ -29,9 +29,9 @@ const FOOTER_COLUMNS = [
     heading: 'Help',
     links: [
       { label: 'Sizing Guide',  href: '/sizing' },
-      { label: 'Track Order',   href: '/orders' },
+   /*   { label: 'Track Order',   href: '/orders' },
       { label: 'Returns',       href: '/returns' },
-      { label: 'Shipping Info', href: '/shipping' },
+      { label: 'Shipping Info', href: '/shipping' }, */
       { label: 'Contact Us',    href: '/contact' },
       { label: 'FAQ',           href: '/faq' },
     ],
@@ -42,8 +42,8 @@ const FOOTER_COLUMNS = [
       { label: 'About Us',      href: '/about' },
       { label: 'Sustainability', href: '/sustainability' },
       { label: 'Careers',       href: '/careers' },
-      { label: 'Press',         href: '/press' },
-      { label: 'Affiliates',    href: '/affiliates' },
+/*      { label: 'Press',         href: '/press' },
+      { label: 'Affiliates',    href: '/affiliates' },*/
       { label: 'Store Locator', href: '/stores' },
     ],
   },
@@ -52,8 +52,8 @@ const FOOTER_COLUMNS = [
 const SOCIAL_LINKS = [
   { label: 'Instagram', href: 'https://instagram.com', icon: Instagram },
   { label: 'TikTok',    href: 'https://tiktok.com',    icon: null },
-  { label: 'Pinterest', href: 'https://pinterest.com', icon: null },
-  { label: 'Twitter',   href: 'https://twitter.com',   icon: null },
+/*  { label: 'Pinterest', href: 'https://pinterest.com', icon: null },
+  { label: 'Twitter',   href: 'https://twitter.com',   icon: null }, */
 ]
 
 const LEGAL_LINKS = [
