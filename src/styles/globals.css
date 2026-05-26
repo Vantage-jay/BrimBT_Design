@@ -1,0 +1,225 @@
+/* ============================================================
+   BrimBT Design — Global Styles (Refreshed Light Theme)
+   File: src/styles/globals.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design Tokens ────────────────────────────────────────── */
+:root {
+  /* Backgrounds — warm off-whites instead of pure black */
+  --black:        #1a1208;       /* deep warm brown-black */
+  --white:        #faf7f2;       /* warm cream white */
+  --cream:        #f2ece2;       /* soft parchment */
+  --surface:      #f7f3ec;       /* card/section background */
+  --surface-2:    #ede7da;       /* slightly deeper surface */
+
+  /* Brand accent — richer gold */
+  --accent:       #b8860b;       /* dark goldenrod */
+  --accent-light: #d4a017;       /* bright gold */
+  --accent-dark:  #8b6508;       /* deep gold */
+  --accent-bg:    #f5edd6;       /* very light gold tint */
+
+  /* Text */
+  --text-primary:   #1a1208;     /* near-black warm */
+  --text-secondary: #5a4e3c;     /* warm medium brown */
+  --text-muted:     #9c8e7a;     /* light warm gray */
+  --text-light:     #c4b9a8;     /* very light */
+
+  /* Borders */
+  --border:         rgba(184,134,11,0.18);
+  --border-light:   rgba(184,134,11,0.10);
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body:    'DM Sans', sans-serif;
+  --nav-height:   80px;
+  --transition:   0.3s ease;
+  --transition-slow: 0.7s ease;
+}
+
+/* ── Base Reset ───────────────────────────────────────────── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior:smooth; font-size:16px; -webkit-text-size-adjust:100%; }
+
+body {
+  background-color: var(--surface);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+}
+
+/* ── Typography ───────────────────────────────────────────── */
+h1,h2,h3,h4,h5,h6 { font-family:var(--font-display); font-weight:300; line-height:1.1; color:var(--text-primary); }
+p   { font-family:var(--font-body); color:var(--text-secondary); line-height:1.8; }
+a   { color:inherit; text-decoration:none; transition:color var(--transition); }
+button { font-family:var(--font-body); cursor:none; border:none; background:none; }
+img { display:block; max-width:100%; height:auto; }
+input,textarea,select { font-family:var(--font-body); outline:none; }
+ul,ol { list-style:none; }
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:var(--cream); }
+::-webkit-scrollbar-thumb { background:var(--accent); border-radius:2px; }
+::-webkit-scrollbar-thumb:hover { background:var(--accent-dark); }
+
+/* ── Custom Cursor ────────────────────────────────────────── */
+.cursor-dot {
+  width:10px; height:10px;
+  background:var(--accent);
+  border-radius:50%;
+  position:fixed; top:0; left:0;
+  pointer-events:none; z-index:9999;
+  transform:translate(-50%,-50%);
+  transition:transform 0.1s ease;
+  will-change:transform;
+}
+.cursor-ring {
+  width:36px; height:36px;
+  border:1px solid var(--accent);
+  border-radius:50%;
+  position:fixed; top:0; left:0;
+  pointer-events:none; z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:transform 0.35s ease, width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  will-change:transform;
+}
+.cursor-ring.hovered { width:56px; height:56px; opacity:0.5; }
+
+/* ── Selection ────────────────────────────────────────────── */
+::selection { background:var(--accent); color:#fff; }
+::-moz-selection { background:var(--accent); color:#fff; }
+
+/* ── Focus ────────────────────────────────────────────────── */
+:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+
+/* ── Utilities ────────────────────────────────────────────── */
+@layer utilities {
+  .text-display  { font-family:var(--font-display); }
+  .tracking-brand { letter-spacing:0.25em; }
+  .tracking-brand-sm { letter-spacing:0.15em; }
+
+  .eyebrow {
+    font-size:0.625rem;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-family:var(--font-body);
+    font-weight:500;
+  }
+
+  .border-brand  { border-color:var(--border); }
+  .text-accent   { color:var(--accent); }
+
+  .section-pad { padding:7.5rem 3.75rem; }
+
+  .overlay-bottom {
+    background:linear-gradient(to top, rgba(26,18,8,0.7) 0%, transparent 60%);
+  }
+
+  /* Soft card shadow for light theme */
+  .card-shadow {
+    box-shadow: 0 2px 16px rgba(184,134,11,0.08), 0 1px 4px rgba(26,18,8,0.06);
+  }
+}
+
+/* ── Components ───────────────────────────────────────────── */
+@layer components {
+
+  /* Primary Button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center;
+    background: var(--accent);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: background var(--transition), transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 12px rgba(184,134,11,0.25);
+  }
+  .btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(184,134,11,0.35);
+  }
+
+  /* Ghost button */
+  .btn-ghost {
+    @apply inline-flex items-center gap-2;
+    color: var(--text-secondary);
+    font-size: 0.6875rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: color var(--transition);
+  }
+  .btn-ghost:hover { color: var(--accent); }
+
+  /* Nav link */
+  .nav-link {
+    position: relative;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    transition: color var(--transition);
+  }
+  .nav-link::after {
+    content:'';
+    position:absolute;
+    bottom:-3px; left:0;
+    width:0; height:1px;
+    background:var(--accent);
+    transition:width var(--transition);
+  }
+  .nav-link:hover { color: var(--text-primary); }
+  .nav-link:hover::after { width:100%; }
+
+  /* Section title */
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--text-primary);
+  }
+  .section-title em { font-style:italic; color:var(--accent); }
+
+  /* Image zoom */
+  .img-zoom { transition:transform var(--transition-slow); }
+  .img-zoom:hover { transform:scale(1.06); }
+}
+
+/* ── Scroll Reveal ────────────────────────────────────────── */
+.reveal { opacity:0; transform:translateY(40px); transition:opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+.reveal-delay-1 { transition-delay:0.1s; }
+.reveal-delay-2 { transition-delay:0.2s; }
+.reveal-delay-3 { transition-delay:0.3s; }
+.reveal-delay-4 { transition-delay:0.4s; }
+
+/* ── Ticker ───────────────────────────────────────────────── */
+@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.ticker-track { animation:ticker 22s linear infinite; }
+
+/* ── Page transition ──────────────────────────────────────── */
+.page-enter { opacity:0; transform:translateY(16px); }
+.page-enter-active { opacity:1; transform:translateY(0); transition:opacity 0.5s ease, transform 0.5s ease; }
+
+/* ── Mobile ───────────────────────────────────────────────── */
+@media (max-width:768px) {
+  body { cursor:auto; }
+  .cursor-dot, .cursor-ring { display:none; }
+  .section-pad { padding:4rem 1.5rem; }
+}
